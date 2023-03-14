@@ -1,2 +1,2 @@
 #!/bin/bash
-cur -c 1 | paste -s -d '' 
+awk -F'\t' '{print $1}' "$1" | sort | uniq -c | sort -nr | head -n 11
